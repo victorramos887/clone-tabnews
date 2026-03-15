@@ -15,7 +15,7 @@ async function query(queryObject) {
     await client.end();
     return result;
   } catch (err) {
-    console.log(`Erro formatado pelo Catch: ${err}`);
+    console.log(`Este erro deve ser tratado no seu banco de dados: ${err}`);
     throw err;
   } finally {
     await client.end();
