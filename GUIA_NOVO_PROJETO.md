@@ -96,11 +96,11 @@ Crie `infra/compose.yml`:
 ```yml
 services:
   database:
-    image: 'postgres:16.0-alpine3.18'
+    image: "postgres:16.0-alpine3.18"
     env_file:
       - ../.env.development
     ports:
-      - '5432:5432'
+      - "5432:5432"
 ```
 
 Suba o banco:
