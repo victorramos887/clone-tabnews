@@ -1,7 +1,8 @@
-test("GET to /api/v1/status should return 200", async () => {
+test.only("GET to /api/v1/status should return 200", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
 
   expect(response.status).toBe(200);
+
 
   const responseBody = await response.json();
 
@@ -16,7 +17,7 @@ test("GET to /api/v1/status should return 200", async () => {
 
 });
 
-test.only("Teste SQL Injection", async () => {
+test("Teste SQL Injection", async () => {
   // const response = await fetch("http://localhost:3000/api/v1/status?databaseName=local_db");
   const response = await fetch("http://localhost:3000/api/v1/status?databaseName=';SELECT pg_sleep(4);--");
 });
